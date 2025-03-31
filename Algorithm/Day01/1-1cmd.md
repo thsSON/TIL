@@ -45,7 +45,42 @@ https://www.acmicpc.net/problem/1032
     print(solution(fileNames, N))
     ```
 
-    - ## **오늘의 회고**
+    ## 이후 개선 코드
+    ```python
+    import sys
+
+    def solution(fileNames, N):
+        result = list("")
+        for i in range(len(fileNames[0])):
+            result += fileNames[0][i]
+            for j in range(N):
+                if(result[i] != fileNames[j][i]):
+                    result[i] = "?"
+
+        result = "".join(result)
+        return result
+
+    N = int(sys.stdin.readline())
+    fileNames = [sys.stdin.readline().strip() for i in range(N)]
+
+    print(solution(fileNames, N))
+    ```
+    
+    가독성 향상과 Pythonic한 스타일로 개선
+
+    개선 포인트 설명:
+
+    **zip 활용:**
+    zip(*fileNames)를 사용하여 각 파일 이름의 같은 인덱스에 해당하는 문자들을 튜플로 묶어 한 번에 비교합니다.
+
+    **set 사용:**
+    set(chars)를 통해 중복을 제거하여, 문자가 모두 동일한지 쉽게 확인할 수 있습니다.
+
+    **함수 인자 정리:**
+    fileNames 리스트만 인자로 받아 내부에서 길이를 계산하므로, 함수 호출 시 인자 관리가 더 깔끔해집니다.
+
+
+    ## **오늘의 회고**
 
     - **어떤 문제가 있었고, 나는 어떤 시도를 했는지**:
         
