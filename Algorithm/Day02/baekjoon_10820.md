@@ -31,7 +31,8 @@ Python의 문자열 메서드인 `islower()`, `isupper()`, `isdigit()`, `isspace
 `sys.stdin`을 `for` 문으로 순회하는 방식을 사용했다.
 
 ## 구현 코드
-    ```python
+
+```python
     import sys
 
     def solution(s):
@@ -54,7 +55,7 @@ Python의 문자열 메서드인 `islower()`, `isupper()`, `isdigit()`, `isspace
         for line in sys.stdin:
             line = line.rstrip("\n")
             print(solution(line))
-    ```
+```
 
 ---
 

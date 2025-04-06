@@ -40,7 +40,7 @@ Java에서는 이를 개선하여 **한 번의 문자열 탐색으로 `!` 개수
 
 python - 31458
 
-    ```python
+```python
     import sys
 
     def solution(expressions):
@@ -70,11 +70,11 @@ python - 31458
         T = int(sys.stdin.readline())
         expressions = [sys.stdin.readline().strip() for _ in range(T)]
         solution(expressions)
-    ```
+```
 
 java - 31458
 
-    ```java
+```java
 
     package TIL.Algorithm.Day03;
 
@@ -115,11 +115,11 @@ java - 31458
         }
     }
 
-    ```
+```
 
 python - 1929
 
-    ```python
+```python
 
     import sys
 
@@ -170,7 +170,7 @@ python - 1929
         M, N = map(int, sys.stdin.readline().split())
         solution_2nd(M, N)
 
-    ```
+```
 
 ### **오늘의 회고**
 
